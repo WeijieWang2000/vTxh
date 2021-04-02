@@ -1,0 +1,53 @@
+﻿@model db.Books
+
+@{
+    ViewBag.Title = "Buy";
+}
+
+<h2>购买页面</h2>
+
+<div>
+    <h4>Books</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCoverUrl)
+        </dt>
+
+        <dd>
+            <img src="@Model.BookCoverUrl"/>
+        </dd>
+
+    </dl>
+</div>
+
+<form method="post">
+    <input type="hidden" name="bookId" value="@Model.BookId" />
+    数量：<input type="text" name="num" />
+    地址：<input type="text" name="address">
+    <input type="submit" value="确定" />
+</form>
