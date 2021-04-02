@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>tap 轻触</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        tap:
+        1.响应速度要比click快
+        2.不能滑动过
+    </div>
+    <script src="../js/common.js"></script>
+    <script>
+        itcast.tap(document.querySelector('div'),function(e){
+            console.log(e);
+            console.log('自己封装的tap事件绑定成功了');
+        });
+    </script>
+</body>
+</html>

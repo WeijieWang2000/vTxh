@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--viewport  只有移动端才识别-->
+    <!--
+        设置宽度  width   设置成和设备一样的宽度  device-width   设备的宽度
+        设置默认的缩放比 initial-scale  1.0
+        设置是否运行用户自行缩放  user-scalable 0 1 no yes
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            height: 100px;
+            width: 100%;
+            display: block;
+            /*去除 */
+            -webkit-tap-highlight-color: red;
+            border: 10px solid blue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:;"></a>
+<script>
+    var a = document.querySelector('a');
+    /*触摸开始事件*/
+    a.addEventListener('touchstart',function(e){
+        console.log('touchstart');
+    });
+    /*触摸滑动事件*/
+    a.addEventListener('touchmove',function(e){
+        console.log('touchmove');
+    });
+    /*触摸结束事件*/
+    a.addEventListener('touchend',function(e){
+        console.log('touchend');
+    });
+    /*触摸结束事件*/
+    a.addEventListener('click',function(e){
+        console.log('click');
+    });
+</script>
+</body>
+</html>

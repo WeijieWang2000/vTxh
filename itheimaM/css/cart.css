@@ -1,0 +1,265 @@
+body{
+    background: #f5f5f5;
+    min-width: 300px;
+}
+.hm_topBar{
+    position: static;
+}
+.hm_safeTip{
+    height: 34px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 33px;
+    background: #fff;
+    text-align: center;
+}
+.hm_safeTip > p{
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+    padding-left: 23px;
+}
+.hm_safeTip > p::before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background: url("../images/safe_icon.png") no-repeat;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px
+}
+/*店铺*/
+.hm_shop{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    background: #fff;
+    margin-top: 10px;
+}
+.hm_shop > .hm_shop_tit{
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+}
+.hm_shop > .hm_shop_tit > .hm_shop_tit_left{
+    position: absolute;
+    width: 40px;
+}
+.hm_shop > .hm_shop_tit > .hm_shop_tit_right{
+    width: 100%;
+    padding-left: 40px;
+}
+.hm_shop > .hm_shop_tit > .hm_shop_tit_right > .imgBox{
+    float: left;
+    width: 15px;
+    height: 13px;
+    margin-top: 10px;
+}
+.hm_shop > .hm_shop_tit > .hm_shop_tit_right > .name{
+    float: left;
+
+}
+.hm_shop > .hm_shop_tit > .hm_shop_tit_right > .tip{
+    float: right;
+    color: #d8505c;
+    font-size: 12px;
+}
+.hm_shop > .hm_shop_con{
+
+}
+/*商品盒子*/
+.hm_product{
+    border-top: 1px solid #ccc;
+    height: 100px;
+    padding: 10px 0;
+}
+.hm_product_left{
+    position: absolute;
+    width: 40px;
+}
+.hm_product_right{
+    width: 100%;
+    padding-left: 40px;
+}
+.hm_product_right .product_img{
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+.hm_product_right .product_img img{
+    width: 100%;
+    height: 100%;
+}
+.hm_product_right .product_info{
+    overflow: hidden;
+    padding: 0 10px;
+}
+.hm_product_right .product_info .name{
+    height: 30px;
+    line-height: 15px;
+    display: block;
+    overflow: hidden;
+}
+.hm_product_right .product_info .price{
+    color: #d8505c;
+    padding-top: 5px;
+}
+
+.option{
+
+}
+.option .f_left span{
+    border: 1px solid #ccc;
+    height: 24px;
+    width: 32px;
+    float: left;
+    text-align: center;
+}
+.option .f_left span:first-of-type{
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.option .f_left span:last-of-type{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.option .f_left input{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 24px;
+    width: 32px;
+    float: left;
+    text-align: center;
+}
+.option .f_right .up{
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    width: 20px;
+    height: 5px;
+    display: block;
+    margin-left: -1px;
+}
+.option .f_right .down{
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px ;
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin-top: -2px;
+}
+
+/*复选框*/
+.hm_check_box{
+    height: 34px;
+    width: 40px;
+    padding: 7px 10px;
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+    background-origin: content-box;
+    background-clip: content-box;
+    display: block;
+}
+.hm_check_box[checked]{
+    background-position: -25px 0;
+}
+
+
+/*弹出框*/
+.hm_win{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.hm_win > .hm_win_box{
+    width: 85%;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-top: 200px;
+}
+.hm_win > .hm_win_box  > .text{
+    line-height: 75px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+}
+.hm_win > .hm_win_box  > .btn{
+    padding: 10px 0;
+}
+.hm_win > .hm_win_box  > .btn a{
+    width: 45%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    float: left;
+    border-radius: 4px;
+}
+.hm_win > .hm_win_box  > .btn > .cancel{
+    margin-right: 10%;
+    border: 1px solid #ccc;
+}
+.hm_win > .hm_win_box  > .btn > .submit{
+    background: #d8505c;
+    color: #fff;
+}
+
+.bounceInDown{
+    -webkit-animation: bounceInDown 1s;
+    animation: bounceInDown 1s;
+}
+
+@keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    75%{
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@-webkit-keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    75%{
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}

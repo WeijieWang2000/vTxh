@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>tap 轻触</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        tap:
+        1.响应速度要比click快
+        2.不能滑动过
+    </div>
+    <script>
+        var div = document.querySelector('div');
+
+        /*记录是否滑动过*/
+        var isMove = false;
+        var startTime = 0;
+        div.addEventListener('touchstart',function(e){
+            console.time('time');/*开始记录time这个属性的时间*/
+            startTime = Date.now();  /*new Date().getTime();获取时间戳*/
+            console.log(startTime);
+        });
+        /*触摸滑动事件*/
+        div.addEventListener('touchmove',function(e){
+            isMove = true;
+        });
+        /*触摸结束事件*/
+        div.addEventListener('touchend',function(e){
+            console.timeEnd('time');/*打印当前time这个参数的响应时间*/
+
+            console.log(Date.now()-startTime);
+
+            /*
+            *tap:
+             1.响应速度要比click快  click 300ms 响应时间  150ms
+             2.不能滑动过
+            * */
+            if((Date.now()-startTime) < 150 && !isMove){
+                /*tap 事件*/
+                console.log('符合tap事件的要求');
+                /*在end事件的时候才执行click需要执行的操作  提高的响应*/
+            }
+
+            /*重置*/
+            isMove = false;
+            startTime = 0;
+        })
+    </script>
+</body>
+</html>
