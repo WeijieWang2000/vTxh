@@ -126,8 +126,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ActionResultController.cs" />
     <Compile Include="Controllers\bookController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\storeController.cs" />
+    <Compile Include="Filters\authorAttribute.cs" />
+    <Compile Include="Filters\myActionAttribute.cs" />
+    <Compile Include="Filters\myErrorAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,6 +182,11 @@
     <Content Include="Views\book\update.cshtml" />
     <Content Include="Views\book\updateEntry.cshtml" />
     <Content Include="Views\book\update3.cshtml" />
+    <Content Include="Views\login\Index.cshtml" />
+    <Content Include="Views\login\Error.cshtml" />
+    <Content Include="Views\ActionResult\Index.cshtml" />
+    <Content Include="Views\ActionResult\DisplayCheapBooks.cshtml" />
+    <Content Include="Views\ActionResult\DisplayExpenBooks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

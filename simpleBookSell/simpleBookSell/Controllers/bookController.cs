@@ -1,4 +1,5 @@
-﻿using System;
+﻿using simpleBookSell.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,8 @@ namespace simpleBookSell.Controllers
     {
         // GET: book
         // 首页展示图书列表
+        [author]
+        [OutputCache(CacheProfile = "mySqlCache")]
         public ActionResult bookList()
         {
             List<db.Books> list = db.bll.books.getBooks();

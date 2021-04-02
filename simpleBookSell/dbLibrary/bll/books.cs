@@ -90,5 +90,19 @@ namespace db.bll
             dc.Books.Remove(entry);
             dc.SaveChanges();
         }
+
+        public static List<db.Books> getCheapBooks()
+        {
+            dbEntities dc = new dbEntities();
+            List<Books> list = dc.Books.Where(a => a.Price < 20).ToList<Books>();
+            return list;
+        }
+        public static List<db.Books> getExpensiveBooks()
+        {
+            dbEntities dc = new dbEntities();
+            List<Books> list = dc.Books.Where(a => a.Price >= 20).ToList<Books>();
+            return list;
+        }
+
     }
 }

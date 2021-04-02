@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>图书展示</h2>
+<fieldset>
+    <legend>20元以下特价专区</legend>
+    @Html.Action("DisplayCheapBooks")
+</fieldset>
+
+<fieldset>
+    <legend>热卖书籍</legend>
+    @Html.Action("DisplayExpenBooks")
+</fieldset>
+

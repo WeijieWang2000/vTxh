@@ -9,6 +9,7 @@ namespace simpleBookSell.Controllers
     public class storeController : Controller
     {
         // 首页展示图书列表
+        [OutputCache(Duration = 60)]
         public ActionResult bookList()
         {
             List<db.Books> list = db.bll.books.getBooks();
@@ -18,6 +19,7 @@ namespace simpleBookSell.Controllers
 
         // 购书
         [HttpGet]
+        [OutputCache(CacheProfile = "myCache")]
         public ActionResult order(int id)
         {
             db.Books entry = db.bll.books.getEntry(id);
