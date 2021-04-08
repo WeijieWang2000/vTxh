@@ -1,4 +1,5 @@
-﻿using System;
+﻿using simpleBookSell.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace simpleBookSell.Controllers
     public class storeController : Controller
     {
         // 首页展示图书列表
+        [author]
         [OutputCache(Duration = 60)]
         public ActionResult bookList()
         {
