@@ -35,18 +35,18 @@
         @RenderBody()
         <hr />
         <footer>
-            <link type="text/css" rel="stylesheet" href="/ActionResult/css?color=red" />
+            <link type="text/css" rel="stylesheet" href="/ActionResult/css?color=blue" />
             <a href="/ActionResult/DownloadFile">DownloadFile</a>
             <a href="/ActionResult/transJSon">transJSon</a>
-
             <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
         </footer>
     </div>
-    <script type="text/javascript">
-        $.getScript("/ActionResult/js");
-    </script>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        $.getScript("/ActionResult/js");
+    </script>
 </body>
 </html>

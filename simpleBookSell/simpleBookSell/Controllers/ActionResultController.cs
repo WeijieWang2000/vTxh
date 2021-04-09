@@ -9,7 +9,7 @@ namespace simpleBookSell.Controllers
     public class ActionResultController : Controller
     {
         // GET: ActionResult
-        public ActionResult Index()
+        public ActionResult Txh()
         {
             return View();
         }
@@ -26,15 +26,15 @@ namespace simpleBookSell.Controllers
         
         public ActionResult css(string color)
         {
-            if (color == "red")
-            {
-                return Content("body{color:red}", "text/css");
-            }
-            else if (color == "blue")
-            {
-                return Content("body{color:red}", "text/css");
-            }
-            return Content("body{color:black}", "text/css");
+            //if (color == "red")
+            //{
+            //    return Content("body{color:red}", "text/css");
+            //}
+            //else if (color == "blue")
+            //{
+            //    return Content("body{color:red}", "text/css");
+            //}
+            return Content("body{color:" + color + "}", "text/css");
         }
 
         public ActionResult DownloadFile()
@@ -52,6 +52,5 @@ namespace simpleBookSell.Controllers
         {
             return JavaScript("alert('1111111')");
         }
-
     }
 }

@@ -184,7 +184,7 @@
     <Content Include="Views\book\update3.cshtml" />
     <Content Include="Views\login\Index.cshtml" />
     <Content Include="Views\login\Error.cshtml" />
-    <Content Include="Views\ActionResult\Index.cshtml" />
+    <Content Include="Views\ActionResult\Txh.cshtml" />
     <Content Include="Views\ActionResult\DisplayCheapBooks.cshtml" />
     <Content Include="Views\ActionResult\DisplayExpenBooks.cshtml" />
   </ItemGroup>
