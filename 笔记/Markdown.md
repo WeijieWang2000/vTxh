@@ -116,15 +116,27 @@ $$\begin{aligned}
 \end{aligned}$$
 
 $$Y = \beta_0 + \beta_1X_1 + \beta_2X_2^2$$
+
 $$a_{11} + a_{12}^2 + a_{13}^3 = 0$$
+
 $$\bar{x} \hat{x} \underline{x} \widetilde{x}$$
+
 $$f(x,y)=\frac{x+y}{x-y}$$
+
 $$f(x,y)=\sqrt[n]{\frac{x^2+y^2}{x^2-y^2}}$$
+
 $$\sum_{i = 1}^{n} x_i$$
+
 $$\prod_{i = 1}^{n} x_i$$
+
 $\displaystyle\sum_{i = 1}^{n} x_i$
+
 $\displaystyle\prod_{i = 1}^{n} x_i$
+
 $\displaystyle\lim_{x\rightarrow 0}\frac{\sin x}{x} = 1$
+
 $\displaystyle\lim_{x\rightarrow+\infty}(1+\frac{1}{x})^x = e$
+
 $\displaystyle F(x) = \int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}\sigma}e^{-(\frac{x-\mu}{\sigma})^2}dx$
+
 $\varepsilon \sim N(0,\sigma^2I_n)$
